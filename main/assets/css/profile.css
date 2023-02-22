@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+}
+h1 {
+    text-align: left;
+    margin: 0 0 1rem 1rem;
+}
+table {
+    text-align: center;
+    margin: 0 auto;
+    min-width: 50%;
+    font-size: 1.25rem;
+}
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom: 3rem;
+}
+    .table-heading {
+        font-weight: bold;
+        text-align: right;
+    }
+    td {
+        padding: 0.25rem 0.5rem;
+    }
+
+form {
+    display: inline-block;
+    max-width: 45%;
+}
+    fieldset {
+        text-align: left;
+        padding: 1rem;
+        border: 1px solid black;
+        margin-inline: 1rem;
+        min-width: 25vw;
+        
+    }
+        fieldset legend {
+            font-size: 1.75rem;
+            font-weight: bold;
+        }
+        fieldset input {
+            display: block;
+            min-width: 100%;
+            font-size: 1.15rem;
+            padding: 0.25rem;
+            margin: 0.25rem 0 0.5rem 0;
+            border: 1px solid black;
+        }
+        input[type="submit"] {
+            color: white;
+            background-color: green;
+            min-width: 25%;
+            padding: 0.25rem 0.75rem;
+            margin: 0.5rem 0;
+            box-shadow: 3px 3px 3px black;
+            float: right;
+        }
