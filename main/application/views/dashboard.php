@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Dashboard - User</title>
     <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
     <header>
@@ -33,17 +34,20 @@
 <?php foreach($products as $product) { ?>
         <tr>
             <td><?= $product['id'] ?></td>
-            <td><a href=""><?= $product['name'] ?></a></td>
+            <td><a href="/products/show/<?= $product['id'] ?>"><?= $product['name'] ?></a></td>
             <td><?= $product['stock'] ?></td>
             <td><?= $product['sold'] ?></td>
 <?php if($this->session->userdata('user_info')['is_admin']) { ?>
             <td>
-                <a href="/users/edit_product">edit</a>
-                <a href="/users/remove_product">remove</a>
+                <a href="/products/edit/<?= $product['id'] ?>">edit</a>
+                <a href="/products/remove_product/<?= $product['id'] ?>">remove</a>
             </td>
 <?php } ?>
         </tr>
 <?php } ?>
     </table>
+<?php if($this->session->userdata('user_info')['is_admin']) { ?>
+    <button class="btn primary"><a class="anchored primary" href="/products/new">Add new</a></button>
+<?php } ?>
 </body>
 </html>

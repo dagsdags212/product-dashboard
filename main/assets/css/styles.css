@@ -21,13 +21,22 @@ body {
             font-size: 2rem;
         }
         header a{
+            text-decoration: none;
+            color: black;
             float: right;
             font-size: 1.5rem;
         }
+        header a:hover {
+            background-color: lightgray;
+            font-size: 2rem;
+        }
     h1 {
-        font-size: 3rem;
+        font-size: 2.25rem;
         text-transform: uppercase;
         margin-block: 1.5rem;
+    }
+    h2 {
+        margin: 2rem 0 1rem 0;
     }
     form, form input {
         font-size: 1.25rem;
@@ -43,3 +52,74 @@ body {
             background-color: green;
             padding: 0.25rem 1rem;
         }
+
+/* custom classes */
+.btn {
+    font-size: 1.25rem;
+    padding: 0.25rem 0.5rem;
+    margin: 1rem 0.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.anchored {
+    text-decoration: none;
+}
+
+.primary {
+    color: white;
+    background-color: blue;
+}
+.text-block {
+    border: 1px solid black;
+    min-width: 35vw;
+    min-height: 15vh;
+    padding: 0.5rem;
+    margin-block: 0.25rem 0.75rem;
+    font-size: 1rem;
+    resize: none
+}
+.review {
+    max-width: 30vw;
+    margin: 0 auto;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+    .author {
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+    .date {
+        font-style: italic;
+        font-size: 0.8rem;
+        float: right;
+    }
+    .content {
+        font-size: 1.5rem;
+        margin-block: 1rem;
+        padding: 1rem;
+        outline: 1px solid black;
+        text-align: left;
+    }
+.comment {
+    font-size: 1rem;
+    max-width: 25vw;
+    text-align: left;
+    margin-left: 33%;
+}
+.comment-block {
+    border: 1px solid black;
+    min-width: 29.1vw;
+    min-height: 8vh;
+    padding: 0.5rem;
+    margin-block: 0.25rem 0.75rem;
+    font-size: 1rem;
+    resize: none
+}
+.post {
+    margin-bottom: 2rem;
+    position: relative;
+    left: 247px;
+    border: 2px solid rgb(195, 237, 195);
+    outline: 1px solid black;
+    font-size: 1rem;
+}

@@ -21,9 +21,9 @@
         <label for="last_name">Last name:</label>
         <input type="text" id="last_name" name="last_name">
         <label for="password">Password:</label>
-        <input type="text" id="password" name="password">
+        <input type="password" id="password" name="password">
         <label for="password_conf">Confirm Password:</label>
-        <input type="text" id="password_conf" name="password_conf">
+        <input type="password" id="password_conf" name="password_conf">
         <input type="submit" value="Log in">
     </form>
     <a href="/users/login">Already have an account? Login</a>

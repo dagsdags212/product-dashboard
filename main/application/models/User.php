@@ -27,7 +27,7 @@ class User extends CI_Model {
     public function login($user_data) {
         $result =  $this->db->query('SELECT email, password FROM dashboard.users WHERE email = ?', $user_data['email'])->row_array();
         if(isset($result)) {
-            $valid_credentials = ($user_data['password'] == $result['password'] && $user_data['email'] == $result['email']);
+            $valid_credentials = (md5($user_data['password']) == $result['password'] && $user_data['email'] == $result['email']);
             if($valid_credentials) {
                 echo 'log in success!';
                 return TRUE;
@@ -53,8 +53,8 @@ class User extends CI_Model {
         } else {
             $user_data['is_admin'] = 0;
         }
-        $query = 'INSERT INTO dashboard.users (first_name, last_name, email, password, is_admin, created_at, updated_at) VALUES (?,?,?,?,?,?,?)';
-        $values = array($user_data['first_name'], $user_data['last_name'], $user_data['email'], $user_data['password'], $user_data['is_admin'], date('Y-m-d H:i:s'), date('Y-m-d H:i:s'));
+        $query = 'INSERT INTO dashboard.users (first_name, last_name, email, password, is_admin, created_at, updated_at) VALUES (?,?,?,?,?,NOW(),NOW())';
+        $values = array($user_data['first_name'], $user_data['last_name'], $user_data['email'], md5($user_data['password']), $user_data['is_admin']);
         if($this->db->query($query, $values)) {
             return TRUE;
         }

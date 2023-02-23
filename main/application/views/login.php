@@ -17,7 +17,7 @@
         <label for="email">Email address:</label>
         <input type="text" id="email" name="email">
         <label for="password">Password:</label>
-        <input type="text" id="password" name="password">
+        <input type="password" id="password" name="password">
         <input type="submit" value="Log in">
     </form>
     <a href="/users/register">Don't have an account? Register</a>

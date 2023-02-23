@@ -43,11 +43,11 @@
             <legend>Change Password</legend>
             <input type="hidden" name="action" value="reset_password">
             <label for="password_old">Old Password:</label>
-            <input type="text" name="password_old">
+            <input type="password" name="password_old">
             <label for="password_new">New Password:</label>
-            <input type="text" name="password_new">
+            <input type="password" name="password_new">
             <label for="password_conf">Confirm Password:</label>
-            <input type="text" name="password_conf">
+            <input type="password" name="password_conf">
             <input type="submit" value="Save">
         </fieldset>
     </form>
